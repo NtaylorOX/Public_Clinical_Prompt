@@ -1,0 +1,6 @@
+{"placeholder": "text_a"} predict length of stay: {"mask"} for patient's health condition, predict the possible length of the patient to be in the hospital.
+{"placeholder": "text_a"} The length of stay of the patient will be {"mask"}.
+{"placeholder": "text_a"} The patient will be at hospital with a {"mask"} length.
+{"placeholder": "text_a"} Random word {"mask"}.
+{"placeholder": "text_a"}. {"mask"}.
+

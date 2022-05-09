@@ -1,0 +1,34 @@
+# max_seq_len: 4096 #Max number of words to consider per example when xbert/preprocessing.
+# #Default is 128. MIMIC discharge summary mean/std/max = 1358/792/7711
+# max_char_len: None # Max number of characters to consider per example when xbert/preprocessing for tokenizer.
+# #Default is 4096. MIMIC mean/std/max = 8794/5118/51230. Truncation is now ON, but defaults to max 
+# local_attention_window: 512
+# global_attention_window: 4096 #Max number of tokens to consider. MIMIC mean/std/max = 2742/1602/17593
+# base_model_name: 'allenai/biomed_roberta_base'
+# model_name: 'simonlevine/biomed_roberta_base-4096-speedfix'
+
+# label_text_emb_model_name: 'allenai/biomed_roberta_base' #'sentence-transformers/roberta-large-nli-stsb-mean-tokens'
+# # label_emb: 'pifa-tfidf' #'text-emb'
+
+prepare_for_xbert:
+  subsampling: false #take a trivially small subsample.
+  icd_version: '9' #if 10, only diag codes currently implemented, so will error out.
+  diag_or_proc: 'diag' # 'diag' or 'proc'
+  one_or_all_icds: 1 #'all' #'all' #load in 'all' ICDs, otherwise an int (i.e., 1 for just primary).
+  note_category: 'Discharge summary' #'Discharge summary' #load in 'all' clinical categories, otherwise a string (i.e., 'Discharge summary').
+
+# xbert_model_training:
+  # per_device_training_batchsize: 8
+  # per_device_validation_batchsize: 8
+  # grad_accu_steps: 1
+  # per_device_training_batchsize: 2
+  # per_device_validation_batchsize: 4
+  # grad_accu_steps: 4
+  # max_steps: 1000
+  # warmup_steps: 100
+  # logging_steps: 50
+  # learning_rate: 0.00005
+  # max_steps: 4
+  # warmup_steps: 2
+  # logging_steps: 4
+  # learning_rate: 0.5

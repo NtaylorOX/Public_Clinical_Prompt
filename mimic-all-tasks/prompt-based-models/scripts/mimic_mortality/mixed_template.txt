@@ -1,0 +1,3 @@
+{"placeholder": "text_a"} {"soft": "This"} patient {"soft":"will be"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient {"soft":"on path to"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient will {"soft":"be"} {"mask"}.

@@ -1,0 +1,7 @@
+AcuteMedicine
+Cardiology
+Gastroenterology
+Neurology
+Obstetrics
+Oncology
+Respiratory

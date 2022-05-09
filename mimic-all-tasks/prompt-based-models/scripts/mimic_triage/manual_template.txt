@@ -1,0 +1,6 @@
+Best department is {"mask"}. {"placeholder": "text_a"}
+Patient should go to department {"mask"}. {"placeholder": "text_a"}
+{"placeholder": "text_a"} Patient should go to department {"mask"}.
+{"placeholder": "text_a"} Suitable triage {"mask"}.
+{"placeholder": "text_a"} random word {"mask"}.
+{"placeholder": "text_a"}. {"mask"}. 

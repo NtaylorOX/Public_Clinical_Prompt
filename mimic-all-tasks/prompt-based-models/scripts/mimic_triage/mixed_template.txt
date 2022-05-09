@@ -1,0 +1,5 @@
+{"placeholder": "text_a"} {"soft": "This"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient {"soft":"should go to"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient should {"soft":"go to"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient should {"soft":"go to this medical team based on symptoms of their illness"} {"mask"}.
+{"placeholder": "text_a"} random words here {"soft":"random"} {"mask"}.

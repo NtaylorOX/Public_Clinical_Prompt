@@ -1,0 +1,75 @@
+dataset:
+  name: TACRED
+  path: datasets/RelationClassification/TACRED
+
+plm:
+  model_name: roberta
+  model_path: roberta-large
+  optimize:
+    name: AdamW
+    freeze_para: False
+    lr: 0.00003
+    weight_decay: 0.01
+    adam_epsilon: 1.0E-6
+    scheduler:
+      type: 
+      num_warmup_steps: 500
+
+reproduce:
+  seed: 42
+
+dataloader:
+  max_seq_length: 512
+
+train:
+  batch_size: 1
+  num_epochs: 5
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+
+test:
+  batch_size: 8
+
+dev:
+  batch_size: 8
+
+
+
+template: ptr_template
+verbalizer: ptr_verbalizer
+
+
+ptr_template:
+  choice: 0
+  file_path: scripts/RelationClassification/TACRED/ptr_template.txt
+  optimize:
+    name: AdamW
+    adam_epsilon: 1.0e-8
+    lr: 0.00001
+
+ptr_verbalizer:
+  choice: 0
+  file_path: scripts/RelationClassification/TACRED/ptr_verbalizer.jsonl
+  
+environment:
+  num_gpus: 1
+  cuda_visible_devices:
+    - 1
+  local_rank: 0 
+
+classification:
+  loss_function: nll_loss
+
+learning_setting: few_shot
+
+few_shot:
+  parent_config: learning_setting
+  few_shot_sampling: sampling_from_train
+  
+sampling_from_train:
+  parent_config: few_shot_sampling
+  num_examples_per_label: 32
+  also_sample_dev: True
+  num_examples_per_label_dev: 32
+  seed:
+    - 123

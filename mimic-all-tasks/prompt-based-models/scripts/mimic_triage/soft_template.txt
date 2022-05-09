@@ -1,0 +1,3 @@
+{"placeholder": "text_a"} {"soft": "Patient should go to"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "Patient should go to"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "Patient should go to"} {"mask"}.

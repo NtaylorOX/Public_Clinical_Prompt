@@ -1,0 +1,3 @@
+{"placeholder": "text_a"} {"soft": "This"} patient {"soft":"will be in hospital for a "} {"mask"} length.
+{"placeholder": "text_a"} {"soft": "This"} patient {"soft":"will spend how long time in the hospital"} {"mask"}.
+{"placeholder": "text_a"} {"soft": "This"} patient will {"soft":"be"} {"mask"}.

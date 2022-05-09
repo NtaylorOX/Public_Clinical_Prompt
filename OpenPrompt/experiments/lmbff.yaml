@@ -1,0 +1,91 @@
+dataset:
+  name: sst-2
+  path: datasets/TextClassification/SST-2/16-shot/16-13
+
+task: classification
+
+dataloader:
+  max_seq_length: 256
+
+plm:
+  model_name: roberta
+  model_path: roberta-large
+  optimize:
+    freeze_para: False
+    lr: 0.00001
+    weight_decay: 0.01
+    scheduler:
+      type: 
+      num_warmup_steps: 50
+
+template_generator:
+  plm:
+    model_name: t5
+    model_path: t5-large
+  max_length: 20
+  target_number: 2
+  beam_width: 100
+  template: 
+    file_path: scripts/LMBFF/SST-2/template_for_auto_t.txt
+
+verbalizer_generator:
+  candidate_num: 100
+  label_word_num_per_class: 100
+  score_fct: llr
+  normalize: True
+
+classification:
+  metric: 
+    - micro-f1
+    - accuracy
+  loss_function: cross_entropy
+  auto_t: True
+  auto_v: False
+
+
+train:
+  num_epochs: 10 # the number of training epochs.
+  batch_size: 2
+  clean: True
+
+test:
+  batch_size: 8
+
+dev:
+  batch_size: 8
+
+
+
+template: mixed_template
+verbalizer: manual_verbalizer
+
+
+mixed_template:
+  choice: 0
+  file_path: scripts/LMBFF/SST-2/manual_template.txt
+
+manual_verbalizer:
+  choice: 0
+  file_path: scripts/LMBFF/SST-2/manual_verbalizer.txt
+  
+environment:
+  num_gpus: 2
+  cuda_visible_devices:
+    - 0
+    - 1
+  local_rank: 0 
+
+learning_setting: full
+
+few_shot:
+  parent_config: learning_setting
+  few_shot_sampling: sampling_from_train
+  
+sampling_from_train:
+  parent_config: few_shot_sampling
+  num_examples_per_label: 16
+  also_sample_dev: True
+  num_examples_per_label_dev: 16
+  seed:
+    - 123
+
