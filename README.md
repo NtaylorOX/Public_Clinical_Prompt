@@ -60,9 +60,9 @@ This is a more experimental task where we have further split icd9 diagnosis code
 
 By default this will take the top 20 most frequent icd9 diagnosis codes and group into new triage categories, as remove all other data (still contains the vast majority of the data) and place new train/validate/test splits inside the folder "/mimic-icd9-classification/data/intermediary_data/triage/{train/validate/test}.csv"
 
-## Mimic-III clinical outcomes tasks - Mortality prediction and Length of Stay
+## Formatting Mimic-III clinical outcomes tasks - Mortality prediction and Length of Stay
 
-Follow instructions provided by: https://github.com/bvanaken/clinical-outcome-prediction 
+These task datasets can be produced with easy by following instructions provided by: https://github.com/bvanaken/clinical-outcome-prediction. They use older package versions, so it will be easier to make a new python environment and follow their instructions, and once data is produced, come back here :)
 
 ## Continual Training of PubMedBERT on Mimic-III
 
