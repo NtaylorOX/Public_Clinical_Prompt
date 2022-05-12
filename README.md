@@ -2,7 +2,7 @@
 
 # Repo to contain code relating to prompt based models for Mimic-III/Biomedical tasks
 
-This repo contains code for the following work titled: "ClinicalPrompt - Application of prompt learning to clinical decision support", paper: ...
+This repo contains code for the following work titled: "ClinicalPrompt - Application of prompt learning to clinical decision support", paper: https://arxiv.org/abs/2205.05535
 
 We do our best to provide clear instructions for recreating the experiments here, however the code was an envolving beast and certain scripts are quite involved and you will likely want to understand which environment specific arguments are provided. Our local setup was primarily single gpu with a specific number index. This may not suit your own setup, but generally you can always use gpu number of 0 to have pytorch/cuda select the default/first available gpu in most cases
 
