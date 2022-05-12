@@ -232,5 +232,15 @@ git clone https://github.com/NtaylorOX/Public_Prompt_Mimic_III.git
 pip install -r requirements.txt
 ```
 
+## Citation
+```bibtex
+@misc{ClinicalPromptLearning,
+  author = {Taylor, Niall and Zhang, Yi and Joyce, Dan and Nevado-Holgado, Alejo and Kormilitzin, Andrey},
+  title = {Clinical Prompt Learning with Frozen Language Models},  
+  publisher = {arXiv},
+  year = {2022},
+}
+```
+
 
 
