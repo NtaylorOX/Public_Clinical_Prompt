@@ -24,6 +24,7 @@ Data cannot be stored here, so access to the raw mimic-iii data will be required
 
 The raw data is contained in the following: "./data/physionet.org/files/mimiciii/1.4/zipped_data/"
 
+For this repo, easiest thing to do is create a directory called raw_mimic_data either store the files there or create a symbolic link to wherever they are stored.
 
 ### Formatting for icd9 top 50 classification
 
