@@ -56,7 +56,7 @@ By default this will take the top 50 most frequent icd9 diagnosis codes as remov
 ```
 python mimic-all-tasks/preprocessing_scripts/format_mimic_icd9_triage.py
 ```
-This is a more experimental task where we have further split icd9 diagnosis codes into groupings that reflect their disease ontology and likely department/treatment pathways.
+This is a more experimental task where we have further split icd9 diagnosis codes into groupings that reflect their disease ontology and likely department/treatment pathways. This actually requires a separate csv file with our mappings from ICD9 code to triage/phenotype group - please ask here or email: niall.taylor@st-hughs.ox.ac.uk for this file as right now it is now cannot be uploaded to github.
 
 By default this will take the top 20 most frequent icd9 diagnosis codes and group into new triage categories, as remove all other data (still contains the vast majority of the data) and place new train/validate/test splits inside the folder "/mimic-icd9-classification/data/intermediary_data/triage/{train/validate/test}.csv"
 
