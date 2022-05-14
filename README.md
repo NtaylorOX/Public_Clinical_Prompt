@@ -233,6 +233,7 @@ pip install -r requirements.txt
 ```
 
 ## Citation
+Please cite our paper if you find this repo useful! Many thanks!
 ```bibtex
 @misc{ClinicalPromptLearning,
   author = {Taylor, Niall and Zhang, Yi and Joyce, Dan and Nevado-Holgado, Alejo and Kormilitzin, Andrey},
